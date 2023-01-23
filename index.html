@@ -6,8 +6,35 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Chik-chik - Барбершоп</title>
 
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="./icons/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./icons/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="./icons/favicon-16x16.png"
+    />
+    <link rel="manifest" href="./site.webmanifest" />
+    <link
+      rel="mask-icon"
+      href="./icons/safari-pinned-tab.svg"
+      color="#241d1c"
+    />
+    <meta name="msapplication-TileColor" content="#241d1c" />
+    <meta name="theme-color" content="#241d1c" />
+
     <link rel="stylesheet" href="./css/normalize.css" />
     <link rel="stylesheet" href="./css/style.css" />
+    <link rel="stylesheet" href="./css/preload.css" />
     <link rel="stylesheet" href="./css/header.css" />
     <link rel="stylesheet" href="./css/navigation.css" />
     <link rel="stylesheet" href="./css/main-link.css" />
@@ -18,6 +45,8 @@
     <link rel="stylesheet" href="./css/reserve.css" />
     <link rel="stylesheet" href="./css/radio.css" />
     <link rel="stylesheet" href="./css/footer.css" />
+
+    <script src="js/index.js"></script>
   </head>
   <body>
     <header class="header">
@@ -53,7 +82,7 @@
             <span>Мы создаём искусство, которое не стыдно показать</span>
           </h1>
 
-          <div class="slider">
+          <div class="hero__slider slider">
             <div class="slider__container">
               <ul class="slider__list">
                 <li class="slider__item">
@@ -197,7 +226,7 @@
             <li class="about__item">
               <h3 class="about__item-title">Мастера бород и усов</h3>
               <p class="about__item-description">
-                Мы заботливо уложим вашу бороду и усы
+                Мы заботливо уложим вашу бороду и&nbsp;усы
               </p>
             </li>
             <li class="about__item">
@@ -381,11 +410,11 @@
       <div class="container">
         <div class="footer__container">
           <img
-            class="header__logo"
+            class="footer__logo"
             src="img/logo.svg"
             alt="Логотип барбершоп Chik-chik"
           />
-          <nav class="navigation">
+          <div class="footer__navigation navigation">
             <ul class="navigation__list">
               <li class="navigation__item">
                 <a href="#price" class="navigation__link">Стоимость услуг</a>
@@ -394,11 +423,23 @@
                 <a href="#about" class="navigation__link">О нас</a>
               </li>
             </ul>
-          </nav>
+          </div>
 
           <ul class="footer__list">
-            <li class="footer__item">Designer: Anastasia Ilina</li>
-            <li class="footer__item">Developer: Andrey Lavryonov</li>
+            <li class="footer__item">
+              Designer:
+              <a class="footer__link" href="https://t.me/Mrchmallowww"
+                >Anastasia Ilina</a
+              >
+            </li>
+            <li class="footer__item">
+              Developer:
+              <a
+                class="footer__link"
+                href="https://innokentykedrov.github.io/portfolio/"
+                >Andrey Lavryonov</a
+              >
+            </li>
           </ul>
         </div>
         <span class="footer__copyright">© chik chik, 2023</span>

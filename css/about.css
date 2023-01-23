@@ -23,25 +23,26 @@
   padding: 0;
   list-style-type: none;
   display: grid;
-  grid-template-columns: repeat(auto-fit, 384px);
-  gap: 24px 32px;
+  grid-template-columns: repeat(auto-fill, minmax(384px, 1fr));
+  gap: 24px 24px;
 }
 
 .about__item {
-  padding: 6px 6px 6px 96px;
+  padding: 6px 0 6px 96px;
   background-size: 80px;
   background-repeat: no-repeat;
   background-position: left;
+  min-height: 80px;
 }
 
 .about__item:first-child {
-  background-image: url("../img/icon1.svg");
+  background-image: url('../img/icon1.svg');
 }
 .about__item:nth-child(2) {
-  background-image: url("../img/icon2.svg");
+  background-image: url('../img/icon2.svg');
 }
 .about__item:last-child {
-  background-image: url("../img/icon3.svg");
+  background-image: url('../img/icon3.svg');
 }
 
 .about__item-title {
@@ -59,16 +60,16 @@
 
 @media (max-width: 1024px) {
   .about__description {
-    margin-bottom: 45px;
+    margin-bottom: 46px;
   }
 
   .about__list {
-    grid-template-columns: repeat(auto-fit, 290px);
-    gap: 24px 29px;
+    grid-template-columns: repeat(auto-fill, minmax(290px, 1fr));
   }
 
   .about__item {
-    padding: 96px 6px 6px 0;
+    padding-top: 96px;
+    padding-left: 0;
     background-position: left top;
   }
 }
@@ -80,6 +81,7 @@
 
   .about__title {
     font-size: 32px;
+    margin-bottom: 24px;
   }
 
   .about__description {
@@ -87,11 +89,13 @@
   }
 
   .about__list {
-    grid-template-columns: repeat(auto-fit, 320px);
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
   }
 
   .about__item {
-    padding: 6px 6px 6px 96px;
+    padding-top: 0;
+    padding-left: 96px;
+    background-position: left;
   }
 
   .about__item-title {
@@ -106,20 +110,21 @@
 
   .about__title {
     font-size: 20px;
+    margin-bottom: 16px;
   }
 
   .about__description {
     font-size: 12px;
-    margin-bottom: 32px;
   }
 
   .about__list {
-    grid-template-columns: repeat(auto-fit, 272px);
+    grid-template-columns: minmax(272px, 1fr);
   }
 
   .about__item {
     padding-left: 72px;
     background-size: 64px;
+    min-height: 64px;
   }
 
   .about__item-description {
