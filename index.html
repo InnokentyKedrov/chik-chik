@@ -9,20 +9,10 @@
     <link
       rel="apple-touch-icon"
       sizes="180x180"
-      href="./icons/apple-touch-icon.png"
+      href="./icons/apple-touchn.jpg"
     />
-    <link
-      rel="icon"
-      type="image/png"
-      sizes="32x32"
-      href="./icons/favicon-32x32.png"
-    />
-    <link
-      rel="icon"
-      type="image/png"
-      sizes="16x16"
-      href="./icons/favicon-16x16.png"
-    />
+    <link rel="icon" type="e/jpg" sizes="32x32" href="./icons/favicon-2.jpg" />
+    <link rel="icon" type="e/jpg" sizes="16x16" href="./icons/favicon-6.jpg" />
     <link rel="manifest" href="./site.webmanifest" />
     <link
       rel="mask-icon"
@@ -253,7 +243,10 @@
 
           <form action="" class="reserve__form">
             <div class="reserve__form-container">
-              <fieldset class="reserve__fieldset">
+              <fieldset
+                class="reserve__fieldset reserve__fieldset_service"
+                name="fieldservice"
+              >
                 <legend class="reserve__legend">Услуга</legend>
                 <label class="radio">
                   <input class="radio__input" type="radio" name="service" />
@@ -287,13 +280,13 @@
                 </label>
               </fieldset>
 
-              <fieldset class="reserve__fieldset">
+              <fieldset class="reserve__fieldset" name="fieldspec">
                 <legend class="reserve__legend">Специалист</legend>
                 <label class="radio">
                   <input class="radio__input" type="radio" name="spec" />
                   <span
                     class="radio__label radio__label_spec"
-                    style="--bg-image: url(../img/spec1.png)"
+                    style="--bg-image: url(../img/1.jpg)"
                     >Игорь</span
                   >
                 </label>
@@ -301,7 +294,7 @@
                   <input class="radio__input" type="radio" name="spec" />
                   <span
                     class="radio__label radio__label_spec"
-                    style="--bg-image: url(../img/spec2.png)"
+                    style="--bg-image: url(../img/2.jpg)"
                     >Анатолий</span
                   >
                 </label>
@@ -309,7 +302,7 @@
                   <input class="radio__input" type="radio" name="spec" />
                   <span
                     class="radio__label radio__label_spec"
-                    style="--bg-image: url(../img/spec3.png)"
+                    style="--bg-image: url(../img/3.jpg)"
                     >Руслан</span
                   >
                 </label>
@@ -317,7 +310,7 @@
                   <input class="radio__input" type="radio" name="spec" />
                   <span
                     class="radio__label radio__label_spec"
-                    style="--bg-image: url(../img/spec4.png)"
+                    style="--bg-image: url(../img/4.jpg)"
                     >Михаил</span
                   >
                 </label>
@@ -325,16 +318,19 @@
                   <input class="radio__input" type="radio" name="spec" />
                   <span
                     class="radio__label radio__label_spec"
-                    style="--bg-image: url(../img/spec5.png)"
+                    style="--bg-image: url(../img/5.jpg)"
                     >Евгений</span
                   >
                 </label>
               </fieldset>
 
-              <fieldset class="reserve__fieldset">
+              <fieldset class="reserve__fieldset" name="fielddate">
                 <legend class="reserve__legend">Дата и время</legend>
 
-                <fieldset class="reserve__fieldset reserve__fieldset_sub">
+                <fieldset
+                  class="reserve__fieldset reserve__fieldset_sub"
+                  name="fieldmonth"
+                >
                   <label class="radio">
                     <input class="radio__input" type="radio" name="month" />
                     <span class="radio__label">Январь</span>
@@ -349,7 +345,10 @@
                   </label>
                 </fieldset>
 
-                <fieldset class="reserve__fieldset reserve__fieldset_sub">
+                <fieldset
+                  class="reserve__fieldset reserve__fieldset_sub"
+                  name="fieldday"
+                >
                   <label class="radio">
                     <input class="radio__input" type="radio" name="day" />
                     <span class="radio__label">18 января</span>
@@ -368,7 +367,10 @@
                   </label>
                 </fieldset>
 
-                <fieldset class="reserve__fieldset reserve__fieldset_sub">
+                <fieldset
+                  class="reserve__fieldset reserve__fieldset_sub"
+                  name="fieldtime"
+                >
                   <label class="radio">
                     <input class="radio__input" type="radio" name="time" />
                     <span class="radio__label">10:00-11:30</span>
@@ -400,7 +402,7 @@
                 </fieldset>
               </fieldset>
             </div>
-            <button class="reserve__btn main-link">Записаться</button>
+            <button class="reserve__btn main-link" id="btn">Записаться</button>
           </form>
         </div>
       </section>

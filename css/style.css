@@ -1,9 +1,9 @@
 @font-face {
-  font-family: "Raleway";
+  font-family: 'Raleway';
   font-style: normal;
   font-weight: 400;
-  src: url("../fonts/raleway-v28-latin_cyrillic-regular.woff"),
-    url("../fonts/raleway-v28-latin_cyrillic-regular.woff2");
+  src: url('../fonts/raleway-v28-latin_cyrillic-regular.woff'),
+    url('../fonts/raleway-v28-latin_cyrillic-regular.woff2');
 }
 
 html {

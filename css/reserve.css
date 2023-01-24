@@ -56,10 +56,6 @@
   margin-bottom: 0;
 }
 
-.reserve__btn {
-  opacity: 0.4;
-}
-
 @media (max-width: 768px) {
   .reserve {
     padding: 40px 0 80px;
