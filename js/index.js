@@ -17,6 +17,11 @@ const removePreload = (elem) => {
   elem.classList.remove('preload');
 };
 
+const disableModal = () => {
+  const modal = document.querySelector('.modal');
+  modal.style.display = 'none';
+};
+
 const startSlider = () => {
   const sliderItems = document.querySelectorAll('.slider__item');
   const sliderList = document.querySelector('.slider__list');
@@ -236,6 +241,43 @@ const renderTime = (wrapper, data) => {
   wrapper.append(...labels);
 };
 
+const initModal = (data) => {
+  const modal = document.querySelector('.modal');
+  const body = document.querySelector('body');
+
+  modal.style.display = '';
+
+  const modalContainer = document.createElement('div');
+  modalContainer.classList.add('modal__container');
+  modalContainer.innerHTML = `
+    <h2 class="modal__title">Спасибо за Ваш выбор!</h2>
+    <div>номер заказа
+      <span class="modal__booking"> #${data.id}</span>
+    </div>
+    <div>Ждём Вас
+      <span class="modal__booking">${new Intl.DateTimeFormat('ru-RU', {
+        month: 'long',
+        day: 'numeric',
+      }).format(new Date(`${data.month}/${data.day}`))}
+      </span>
+    </div>
+    <div>в
+      <span class="modal__booking">${data.time}</span>
+    </div>
+  `;
+
+  modal.append(modalContainer);
+
+  body.style.overflow = 'hidden';
+  body.style.paddingRight = '17px';
+
+  modal.addEventListener('click', () => {
+    body.style.overflow = '';
+    body.style.paddingRight = '';
+    disableModal();
+  });
+};
+
 const initReserve = () => {
   const reserveForm = document.querySelector('.reserve__form');
   const {
@@ -330,21 +372,12 @@ const initReserve = () => {
       btn,
     ]);
 
-    const booking = document.createElement('p');
-    booking.classList.add('booking');
-    booking.textContent = `
-      Спасибо за бронь #${data.id}!
-      Ждём Вас ${new Intl.DateTimeFormat('ru-RU', {
-        month: 'long',
-        day: 'numeric',
-      }).format(new Date(`${data.month}/${data.day}`))}, в ${data.time}
-    `;
-
-    reserveForm.append(booking);
+    initModal(data);
   });
 };
 
 const init = () => {
+  disableModal();
   initSlider();
   initService();
   initReserve();
